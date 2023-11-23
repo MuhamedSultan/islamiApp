@@ -18,7 +18,9 @@ class QuranTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset("assets/images/quran_screen_logo.png", height: 280),
+        Expanded(
+            flex:1,
+            child : Image.asset("assets/images/quran_screen_logo.png")),
         Container(
           margin: EdgeInsets.only(bottom: 4),
           width: double.infinity, height: 2,
@@ -33,7 +35,9 @@ class QuranTab extends StatelessWidget {
           height: 2,
           color: Theme.of(context).primaryColor,
         ),
-        Expanded(child:ListView.separated(itemBuilder: (buildContext,position){
+        Expanded(
+            flex: 3,
+            child:ListView.separated(itemBuilder: (buildContext,position){
            return VerseNameWidget(names[position],position+1);
         }
         ,itemCount: names.length,separatorBuilder: (buildContext,position){
