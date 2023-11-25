@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami/ui/surah_details/surah_deatails.dart';
-
+import 'package:islami/home/quran/surah_details/surah_deatails.dart';
 class VerseNameWidget extends StatelessWidget {
   String title;
   int index;

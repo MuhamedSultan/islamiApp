@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/home/quran/verse-name.dart';
 
-import '../../ui/surah_details/verse-content.dart';
-
 class QuranTab extends StatelessWidget {
   List<String> names =["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
   ,"يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون"

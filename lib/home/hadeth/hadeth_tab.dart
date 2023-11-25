@@ -19,7 +19,7 @@ class _HadethTabState extends State<HadethTab> {
     }
     return Column(
       children: [
-        Expanded(flex: 1, child: Image.asset("assets/images/hadeth_logo.png")),
+        Expanded(flex: 1, child: Image.asset("assets/images/hadeth_header.png")),
         Container(
           margin: EdgeInsets.only(bottom: 4),
           width: double.infinity,
