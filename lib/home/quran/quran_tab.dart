@@ -26,7 +26,7 @@ class QuranTab extends StatelessWidget {
         ),
         Text(
           "Verse Name",
-          style: TextStyle(fontSize: 25),
+          style:Theme.of(context).textTheme.headline5,
         ),
         Container(
           width: double.infinity,
