@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/home/quran/surah_details/verse-content.dart';
 
+import '../../../ui/theme/theme.dart';
+
 class SurahDetails extends StatefulWidget {
   static const String routName = "surah_details";
 
@@ -21,7 +23,8 @@ class _SurahDetailsState extends State<SurahDetails> {
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/main_bg.png"),
+            image: AssetImage( Themes.themeMode == ThemeMode.light
+                ? "assets/images/main_bg.png": "assets/images/main_dark_bg.png"),
             fit: BoxFit.fill,
           ),
         ),
