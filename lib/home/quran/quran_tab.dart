@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/home/quran/verse-name.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class QuranTab extends StatelessWidget {
   List<String> names =["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -25,7 +27,7 @@ class QuranTab extends StatelessWidget {
           color: Theme.of(context).primaryColor,
         ),
         Text(
-          "Verse Name",
+          AppLocalizations.of(context)!.chapter_name,
           style:Theme.of(context).textTheme.headline5,
         ),
         Container(
