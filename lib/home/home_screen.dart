@@ -5,6 +5,7 @@ import 'package:islami/home/hadeth/hadeth_tab.dart';
 import 'package:islami/home/quran/quran_tab.dart';
 import 'package:islami/home/radio/radio_tab.dart';
 import 'package:islami/home/tasbeh/tasbeh_tab.dart';
+import 'package:islami/ui/theme/theme.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home-screen";
@@ -21,7 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/main_bg.png"),
+          image: AssetImage(
+              Themes.themeMode == ThemeMode.light
+                  ? "assets/images/main_bg.png": "assets/images/main_dark_bg.png"),
           fit: BoxFit.fill,
         ),
       ),
@@ -71,11 +74,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-    List<Widget> tabs = [
-      QuranTab(),
-      HadethTab(),
-      TasbehTab(),
-      RadioTab(),
-    ];
+
+  List<Widget> tabs = [
+    QuranTab(),
+    HadethTab(),
+    TasbehTab(),
+    RadioTab(),
+  ];
 
 }

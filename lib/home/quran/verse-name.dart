@@ -18,7 +18,7 @@ class VerseNameWidget extends StatelessWidget {
           children: [
             Expanded(
                 child: Text(index.toString(),
-                    style: TextStyle(fontSize: 24),
+                    style: Theme.of(context).textTheme.bodyText1,
                     textAlign: TextAlign.center)),
 
             Expanded(
