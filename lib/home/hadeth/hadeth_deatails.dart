@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/home/hadeth/hadeth.dart';
 import 'package:islami/home/quran/surah_details/verse-content.dart';
+import 'package:islami/ui/theme/theme.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routName = "hadeth_details";
@@ -13,7 +14,9 @@ class HadethDetails extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/main_bg.png"),
+            image: AssetImage(Themes.themeMode == ThemeMode.dark
+                ? "assets/images/main_dark_bg.png"
+                : "assets/images/main_bg.png"),
             fit: BoxFit.fill,
           ),
         ),
