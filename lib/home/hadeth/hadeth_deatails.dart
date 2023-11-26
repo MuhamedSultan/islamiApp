@@ -26,7 +26,7 @@ class HadethDetails extends StatelessWidget {
               Expanded(
                 child: Card(
                     margin:
-                        EdgeInsets.only(left: 6, right: 6, top: 76, bottom: 12),
+                        EdgeInsets.only(left: 6, right: 6, top: 78, bottom: 12),
                     elevation: 24,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),
