@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:islami/home/hadeth/hadeth.dart';
 import 'package:islami/home/quran/surah_details/verse-content.dart';
 import 'package:islami/ui/theme/theme.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/settings_provider.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routName = "hadeth_details";
@@ -11,12 +14,11 @@ class HadethDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as Hadeth;
+    var provider = Provider.of<SettingsProvidr>(context);
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(Themes.themeMode == ThemeMode.dark
-                ? "assets/images/main_dark_bg.png"
-                : "assets/images/main_bg.png"),
+            image: AssetImage(provider.changeBackgroundImage()),
             fit: BoxFit.fill,
           ),
         ),
