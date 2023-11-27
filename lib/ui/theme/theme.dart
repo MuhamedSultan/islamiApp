@@ -9,6 +9,7 @@ class Themes {
 
   static var lightTheme = ThemeData(
       primaryColor: lightPrimaryColor,
+      hintColor: lightPrimaryColor,
       scaffoldBackgroundColor: Colors.transparent,
       progressIndicatorTheme:
           const ProgressIndicatorThemeData(color: lightPrimaryColor),
@@ -27,10 +28,17 @@ class Themes {
           headline3: TextStyle(color: lightMainTextColor, fontSize: 32),
           headline5: TextStyle(color: lightMainTextColor, fontSize: 24),
           bodyText1: TextStyle(color: lightMainTextColor, fontSize: 24),
-          bodyText2: TextStyle(color: lightMainTextColor, fontSize: 20)));
+          bodyText2: TextStyle(color: lightMainTextColor, fontSize: 20)),
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(24), topLeft: Radius.circular(24))),
+      ));
 
   static var darkTheme = ThemeData(
       primaryColor: darkPrimaryColor,
+      hintColor: darkAccentColor,
       scaffoldBackgroundColor: Colors.transparent,
       progressIndicatorTheme:
           const ProgressIndicatorThemeData(color: darkAccentColor),
@@ -49,7 +57,11 @@ class Themes {
           headline3: TextStyle(color: darkMainTextColor, fontSize: 32),
           headline5: TextStyle(color: darkMainTextColor, fontSize: 24),
           bodyText1: TextStyle(color: darkMainTextColor, fontSize: 24),
-          bodyText2: TextStyle(color: darkMainTextColor, fontSize: 20)));
-  static ThemeMode themeMode = ThemeMode.dark;
-
+          bodyText2: TextStyle(color: darkMainTextColor, fontSize: 20)),
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: darkPrimaryColor,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(24), topLeft: Radius.circular(24))),
+      ));
 }

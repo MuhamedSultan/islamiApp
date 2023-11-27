@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/home/quran/surah_details/verse-content.dart';
+import 'package:provider/provider.dart';
 
+import '../../../provider/settings_provider.dart';
 import '../../../ui/theme/theme.dart';
 
 class SurahDetails extends StatefulWidget {
@@ -16,6 +18,7 @@ class _SurahDetailsState extends State<SurahDetails> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingsProvidr>(context);
     var args = ModalRoute.of(context)?.settings.arguments as SurahDetailsArgs;
     if (chapterContent.isEmpty) {
       readFile(args.index);
@@ -23,8 +26,7 @@ class _SurahDetailsState extends State<SurahDetails> {
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage( Themes.themeMode == ThemeMode.light
-                ? "assets/images/main_bg.png": "assets/images/main_dark_bg.png"),
+            image: AssetImage( provider.changeBackgroundImage()),
             fit: BoxFit.fill,
           ),
         ),
